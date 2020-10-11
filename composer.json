@@ -1,0 +1,35 @@
+{
+    "name": "quillstack/monolog-factory",
+    "description": "The library to add Monolog to The Quill Stack Framework.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "quillstack",
+        "monolog",
+        "factory",
+        "php",
+        "php7"
+    ],
+    "homepage": "http://quillstack.com/framework",
+    "authors": [
+        {
+            "name": "Radek Ziemniewicz",
+            "email": "open-source@quillstack.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "monolog/monolog": "^2.1",
+        "quillstack/di": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "QuillStack\\MonologFactory\\": "src/QuillStack/MonologFactory/",
+            "QuillStack\\Mocks\\": "tests/QuillStack/Mocks/"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.1",
+        "phpunit/phpunit": "^9"
+    }
+}
