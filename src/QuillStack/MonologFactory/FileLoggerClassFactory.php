@@ -17,7 +17,7 @@ final class FileLoggerClassFactory implements CustomFactoryInterface
     private ?Container $container;
 
     /**
-     * {@inheritDoc}
+     * {@inheritDoc}FileLoggerClassFactory
      */
     public function create(string $id)
     {
