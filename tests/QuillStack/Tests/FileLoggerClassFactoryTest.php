@@ -35,5 +35,19 @@ final class FileLoggerClassFactoryTest extends TestCase
         $factory = $this->factory->setContainer($container);
 
         $this->assertInstanceOf(FileLoggerClassFactory::class, $factory);
+        $this->assertEquals(Logger::WARNING, $factory->level);
+    }
+
+    public function testLogLevel()
+    {
+        $container = new Container([
+            FileLoggerClassFactory::class => [
+                'level' => Logger::DEBUG,
+            ]
+        ]);
+        $factory = $container->get(FileLoggerClassFactory::class);
+
+        $this->assertInstanceOf(FileLoggerClassFactory::class, $factory);
+        $this->assertEquals(Logger::DEBUG, $factory->level);
     }
 }
