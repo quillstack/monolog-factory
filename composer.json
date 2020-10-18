@@ -25,7 +25,7 @@
     "autoload": {
         "psr-4": {
             "QuillStack\\MonologFactory\\": "src/QuillStack/MonologFactory/",
-            "QuillStack\\Mocks\\": "tests/QuillStack/Mocks/"
+            "QuillStack\\Tests\\": "tests/QuillStack/Tests/"
         }
     },
     "require-dev": {

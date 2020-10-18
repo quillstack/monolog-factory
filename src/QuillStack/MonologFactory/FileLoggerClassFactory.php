@@ -12,6 +12,11 @@ use QuillStack\DI\CustomFactoryInterface;
 final class FileLoggerClassFactory implements CustomFactoryInterface
 {
     /**
+     * @var Container|null
+     */
+    private ?Container $container;
+
+    /**
      * {@inheritDoc}
      */
     public function create(string $id)
@@ -27,6 +32,8 @@ final class FileLoggerClassFactory implements CustomFactoryInterface
      */
     public function setContainer(Container $container): self
     {
+        $this->container = $container;
+        
         return $this;
     }
 }
