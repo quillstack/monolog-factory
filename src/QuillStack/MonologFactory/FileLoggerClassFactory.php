@@ -40,7 +40,7 @@ final class FileLoggerClassFactory implements CustomFactoryInterface
     public function setContainer(Container $container): self
     {
         $this->container = $container;
-        
+
         return $this;
     }
 }
