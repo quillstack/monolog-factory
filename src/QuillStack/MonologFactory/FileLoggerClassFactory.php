@@ -22,13 +22,18 @@ final class FileLoggerClassFactory implements CustomFactoryInterface
     public int $level = Logger::WARNING;
 
     /**
+     * @var string
+     */
+    public string $path = 'monolog.log';
+
+    /**
      * {@inheritDoc}
      */
     public function create(string $id)
     {
         $logger = new Logger('quillstack');
         $logger->pushHandler(
-            new StreamHandler('../var/logs/quillstack.log', $this->level)
+            new StreamHandler($this->path, $this->level)
         );
 
         return $logger;
